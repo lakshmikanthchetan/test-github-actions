@@ -1,0 +1,12 @@
+name: 'Learn Github Actions'
+on: [push]
+jobs:
+  check-nodejs-version:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '14'
+    - run: node -v
+    - run: npm -v
